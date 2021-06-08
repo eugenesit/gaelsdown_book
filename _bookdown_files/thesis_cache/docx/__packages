@@ -1,0 +1,9 @@
+base
+usethis
+devtools
+remotes
+dplyr
+ggplot2
+bookdown
+knitr
+gaelsdown
