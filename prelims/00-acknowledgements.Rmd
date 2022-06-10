@@ -1,0 +1,1 @@
+This package was possible thanks to the work of Chester Ismay in developing **thesisdown** and Yihui Xie and other contributors in developing **bookdown**. Further acknowledgements for the development of the LaTeX template can be found in the template.tex and queensuthesis.cls files.

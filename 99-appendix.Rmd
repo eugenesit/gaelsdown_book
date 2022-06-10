@@ -2,18 +2,20 @@
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
 
-# The First Appendix
+# Further resources
 
-This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readability and/or setup.
+For information on using R markdown with LaTeX, Yihui Xie's [bookdown guide](https://bookdown.org/yihui/bookdown/) is fairly comprehensive.
 
-**In the main Rmd file**
+If you want to integrate more TeX commands into your thesis, the [Comprehensive TeX Archive Network](https://www.ctan.org/) is where you will find documentation on all the TeX packages available.
 
-```{r ref.label='include_packages', results='hide', echo = TRUE}
+Chester Ismay's thesisdown included a guide (I've written this present guide in place of that one) that you can find [here](https://raw.githubusercontent.com/ismayc/thesisdown_book/master/thesis.pdf). You may also find Rosanna van Hespen's [series of blogposts](https://rosannavanhespen.nl/category/rmarkdown/) on writing a thesis in R markdown useful, although Rosanna used limited LaTeX code and wrote it directly into the markdown files.
+
+# The second appendix
+
+This second appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readability and/or setup.
+
+```{r ref.label='include_packages', eval = FALSE, echo = TRUE}
 ```
 
-**In Chapter \@ref(ref-labels):**
-
-```{r ref.label='include_packages_2', results='hide', echo = TRUE}
+```{r ref.label='knit-diagram', eval = FALSE, echo = TRUE}
 ```
-
-# The Second Appendix, for Fun

@@ -18,7 +18,7 @@ If you looked through the [Pandoc Markdown tutorial](https://rmarkdown.rstudio.c
 
 ```{r load_pkgs, message=FALSE}
 # List of packages required for this analysis
-pkg <- c("dplyr", "ggplot2", "knitr", "bookdown", "devtools")
+pkg <- c("dplyr", "ggplot2", "knitr", "bookdown", "devtools", "DiagrammeR")
 # Check if packages are not installed and assign the
 # names of the packages not installed to the variable new.pkg
 new.pkg <- pkg[!(pkg %in% installed.packages())]
@@ -33,18 +33,18 @@ library(gaelsdown)
 Once the packages are loaded, I can assemble a basic table with R like so:
 
 ```{r cars-table}
-mtcars %>% head() %>% kable()
+mtcars %>% head() %>% kable() %>% kable_styling(latex_options = "scale_down")
 ```
 
 Alternatively, I may want to produce a plot:
 
-```{r cars-figure}
+```{r cars-figure, fig.width = 5.5}
 ggplot(data = mtcars, aes(x = wt, y = mpg)) +
   geom_point() +
   theme_classic()
 ```
 
-I'll have some tips on how to make your tables and figures look great in the next chapter on [Advanced methods].
+I'll have some tips on how to make your tables and figures look great in the next chapter on [Additional functions].
 
 ## Assembling your thesis
 
@@ -62,7 +62,7 @@ Open up **index.Rmd** in RStudio to see what the YAML looks like. It's the secti
 ---
 ```
 
-You need to be particularly attentive to the spaces in the YAML, so make sure when uncommenting lines you only remove the `#` and not the spaces!
+Note: You need to be particularly attentive to the spaces in the YAML, so make sure when uncommenting lines you only remove the `#` and not the spaces!
 
 At the top of the YAML are some pieces of information that get passed along to the title page, such as the title and author name. Since the format for title pages are set for Queen's University, you'll want to change the answers to these entries, but not which lines are included (To change the format of the title page, you'd have to go into the .tex template).
 
@@ -78,15 +78,15 @@ Upon creating your *gaelsdown* project in RStudio, your folder will have the fol
 
 #### bib/
 
-In here is your .bib file, specified in the YAML.
+The .bib file lists the references that you use in your thesis, and the name of your .bib should be specified in the YAML.
 
 #### csl/
 
-In here is your .csl file, specified in the YAML.
+The .csl file defines the formatting for references in your thesis, and .csl files matching the format for specific journals can be found online. The file name should also be specified in the YAML.
 
 #### data/ and figure/
 
-These are just folders for example data and figures; you can set the folders as you wish for scripts, etc.
+These are just folders for example data and figures; you can set the folders as you wish for other files (e.g. a `R/` folder for scripts).
 
 #### _bookdown.yml
 
@@ -98,27 +98,16 @@ These are the main chapters of your thesis, which **gaelsdown** will join into o
 
 #### 98-references.Rmd
 
-Your references come after every section apart from the appendix.
+Your references come after every section apart from the appendices.
 
 #### 99-appendix.Rmd
 
 The appendices come after the references. You can add as many appendix sections as necessary.
 
-### Library calls and importing data
+#### prelims/
 
-To 
+Files for your abstract, acknowledgements, and other files can go in here so that they are not automatically knit like chapters but instead inserted ahead of the table of contents according to YAML instructions. I've written in if statements to check whether the output is LaTeX or not to decide how to insert these files.
 
 ## Summary
 
-In this section, I've covered
-
-Within your 
-
-- Index.Rmd: YAML
-  - frontmatter
-  - yaml instructions
-  - bib and cls files
-- Library calls and data import
-- Folder structure
-
-Diagram!
+In this section, I've covered markdown basics including text formatting, headers, and links. I've introduced how to add figures and tables to your thesis, how YAML is used to configure your output, and the different contents of your *gaelsdown* project.

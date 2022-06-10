@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>My Thesis</title>
-  <meta name="description" content="My Thesis" />
+  <title>Introduction | My Thesis</title>
+  <meta name="description" content="Introduction | My Thesis" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="My Thesis" />
+  <meta property="og:title" content="Introduction | My Thesis" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My Thesis" />
+  <meta name="twitter:title" content="Introduction | My Thesis" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="acknowledgements.html"/>
+<link rel="prev" href="acknowledgements.html"/>
+<link rel="next" href="1-getting-started.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -230,22 +230,58 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">My Thesis</h1>
-<p class="author"><em>Your R. Name</em></p>
+<div id="introduction" class="section level1 unnumbered hasAnchor">
+<h1>Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="welcome" class="section level2 unnumbered hasAnchor">
+<h2>Welcome<a href="introduction.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Welcome to the <strong>gaelsdown</strong> guide! This document is intended to get you up and running with writing your thesis in R markdown so that it can be published in a variety of formats, most importantly a PDF with formatting specifications in the TeX language.</p>
+<p>In this <strong>introduction chapter</strong>, I’ll run through the benefits of adopting <strong>gaelsdown</strong> into your writing process and what to expect, then explain the basics of how you get from a R markdown to a formatted pdf. Then, in the <strong>first chapter</strong> of the guide, I’ll provide you with all the basic tools to put together a document with formatting, figures and tables, and a structure appropriate to your thesis. In the <strong>second chapter</strong>, I’ll get into some of the more advanced methods for figures and tables, specifying formatting inline, and more. Finally, in the <strong>third chapter</strong>, I’ll go over some common issues and how you can address them, as well as providing more resources and approaches for troubleshooting.</p>
 </div>
-<div id="abstract" class="section level1 unnumbered hasAnchor">
-<h1>Abstract<a href="index.html#abstract" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-This is a placeholder for including an abstract.
-<p>Second paragraph of abstract starts here.</p>
+<div id="motivation" class="section level2 unnumbered hasAnchor">
+<h2>Motivation<a href="introduction.html#motivation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The purpose of <strong>gaelsdown</strong> is to enable you to write your thesis in R markdown so that you can focus on the content of your thesis. With R markdown, you can insert code for figures, tables, and references at ease, then transform the markdown file into a finished, formatted document that meets the specifications provided by the School of Graduate Studies. This is a departure from what may be a more familiar approach of using R to generate tables and figures separately, then inserting those into a “What-You-See-Is-What-You-Get” (WYSIWYG) editor like Microsoft Word.</p>
+<p>There’s a number of <strong>advantages</strong> to this approach over using a WYSIWYG editor, including:</p>
+<ul>
+<li>Your R code and writing are streamlined into one document, so that changes to figures and tables are automatically integrated whenever you knit your document, and the bibliography and table of contents are automatically generated.</li>
+<li>R markdown is a much more lightweight format to work in, which reduces the load on your computer significantly if your thesis has hundreds of pages and includes many figures.</li>
+<li>The files making up your thesis are in plain text formats that can be easily transferred between platforms and require only free, open source software.</li>
+<li>By using LaTeX to generate your document, you have access to a wide range of packages to support different types of mathematical and scientific formulas and a professional-quality typesetting engine, superior to Microsoft Word.</li>
+<li>Many journals make .tex templates available for authors, which can help with submission. There are also several options for converting from a LaTeX document to a Word-compatible format.</li>
+<li>If you’re writing a thesis for Queen’s University, the formatting of the PDF output already conforms to the specifications that the school has published. If you’re writing for another school, or if you’d like to change some of the formatting, changes can be made in one place that apply to the whole document.</li>
+</ul>
+<p>However, there are some potential challenges with writing your thesis in R markdown, especially if this is a new approach for you. This guide will help with avoiding or anticipating some of these challenges, but be aware of the following:</p>
+<ul>
+<li>Introducing formatting changes into a LaTeX document is a different process than in a WYSIWYG editor, and involves a bit of a learning curve. However, by using a template such as <strong>gaelsdown</strong>, you can avoid much of the LaTeX editing and focus on the content of your thesis.</li>
+<li><strong>gaelsdown</strong> relies on a few different programs when it knits together your document, which means there’s a few different steps at which an error can be introduced. I’ll explain what these steps are, and tips for addressing any issues encountered at each step.</li>
+</ul>
+</div>
+<div id="structure" class="section level2 unnumbered hasAnchor">
+<h2>Structure<a href="introduction.html#structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To understand how <strong>gaelsdown</strong> and similar template packages work, you need to understand the different software involved:</p>
+<ul>
+<li><strong>knitr</strong> converts your R markdown file (.Rmd) into a markdown file (.md). The different between a R markdown file is that it includes R code chunks that need to be rendered as images for them to be markdown compatible.</li>
+<li><strong>pandoc</strong> is included with your RStudio install and is capable of converting between a large number of different text formats, including markdown, Word (.docx), web browser compatible (.html), and LaTeX (.tex).</li>
+<li><strong>LaTeX</strong> renders a typeset format such as PDF from .tex files—if you knit into another format such as gitbook or Word, LaTeX will not have been involved.</li>
+</ul>
+<p>Here’s a visualization of how it all flows together:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:knit-diagram"></span>
+<div id="htmlwidget-ea652b6a9ac498c77d31" style="width:500px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ea652b6a9ac498c77d31">{"x":{"diagram":"\n                  digraph{\n                  graph []\n                  node [shape = rectangle, fontname = \"Courier New\", fontface = bold, style = filled]\n                    rmd [label = \"R Markdown\", fillcolor = \"#fbb4ae\"]\n                    knitr [label = \"knitr\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    pandoc [label = \"pandoc\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    word [label = \"MS Word\", fillcolor = \"#ccebc5\"]\n                    epub [label = \"EPUB\", fillcolor = \"#ccebc5\"]\n                    html [label = \"gitpages\", fillcolor = \"#ccebc5\"]\n                    blank [shape = point, width = 0, height = 0]\n                    img [label = \"graphics\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    md [label = \"markdown\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    tex [label = \"tex\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    engine [label = \"tinytex\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    pdf [label = \"PDF\", fillcolor = \"#ccebc5\"]\n                    style [label = \"LaTeX\ntemplate\", fillcolor = \"#fed9a6\"]\n                  edge []\n                    rmd -> knitr\n                    knitr -> md\n                    knitr -> img\n                    md -> pandoc\n                    img -> pandoc\n                    pandoc -> blank [arrowhead = none]\n                    pandoc -> word\n                    pandoc -> epub\n                    pandoc -> html\n                    tex -> engine\n                    style -> blank [arrowhead = none]\n                    blank -> tex\n                    engine -> pdf\n                    { rank = same; word, epub, html, tex }\n                  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 0.1: Illustration of document generation in gaelsdown, with inputs in red/orange rectangles, software in yellow ellipses, intermediate products in purple hexagons, and outputs a green rectangles.
+</p>
+</div>
+<p>If you knitted this document locally from the <strong>gaelsdown</strong> package and watched the console carefully, then you’ve already seen all these steps in action! You can run the knit again if you want to review it.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="acknowledgements.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="acknowledgements.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="1-getting-started.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Getting started | My Thesis</title>
   <meta name="description" content="Chapter 1 Getting started | My Thesis" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Getting started | My Thesis" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -30,10 +29,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="2-additional-methods.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="2-workflow.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,9 +48,15 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -119,6 +124,29 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 </head>
 
 <body>
@@ -133,12 +161,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li><a href="./"></a></li>
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#welcome"><i class="fa fa-check"></i>Welcome</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#motivation"><i class="fa fa-check"></i>Motivation</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i>Structure</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#welcome"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i>Motivation</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#structure"><i class="fa fa-check"></i>Structure</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="1-getting-started.html"><a href="1-getting-started.html"><i class="fa fa-check"></i><b>1</b> Getting started</a>
 <ul>
@@ -148,21 +177,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.3.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.3.1</b> YAML Ain’t Markup Language</a></li>
 <li class="chapter" data-level="1.3.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.3.2</b> Folders and files</a></li>
-<li class="chapter" data-level="1.3.3" data-path="1-getting-started.html"><a href="1-getting-started.html#library-calls-and-importing-data"><i class="fa fa-check"></i><b>1.3.3</b> Library calls and importing data</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="2-additional-methods.html"><a href="2-additional-methods.html"><i class="fa fa-check"></i><b>2</b> Additional methods</a>
+<li class="chapter" data-level="2" data-path="2-workflow.html"><a href="2-workflow.html"><i class="fa fa-check"></i><b>2</b> Workflow</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="2-additional-methods.html"><a href="2-additional-methods.html#version-control"><i class="fa fa-check"></i><b>2.1</b> Version control</a></li>
-<li class="chapter" data-level="2.2" data-path="2-additional-methods.html"><a href="2-additional-methods.html#kableextra"><i class="fa fa-check"></i><b>2.2</b> kableExtra</a></li>
+<li class="chapter" data-level="2.1" data-path="2-workflow.html"><a href="2-workflow.html#data-files-and-scripts"><i class="fa fa-check"></i><b>2.1</b> Data files and scripts</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="2-workflow.html"><a href="2-workflow.html#targets-package"><i class="fa fa-check"></i><b>2.1.1</b> <code>targets</code> package</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="3-understanding-how-gaelsdown-works-and-troubleshooting.html"><a href="3-understanding-how-gaelsdown-works-and-troubleshooting.html"><i class="fa fa-check"></i><b>3</b> Understanding how gaelsdown works and troubleshooting</a></li>
-<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="chapter" data-level="2.2" data-path="2-workflow.html"><a href="2-workflow.html#version-control"><i class="fa fa-check"></i><b>2.2</b> Version control</a></li>
+<li class="chapter" data-level="2.3" data-path="2-workflow.html"><a href="2-workflow.html#troubleshooting"><i class="fa fa-check"></i><b>2.3</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="2-workflow.html"><a href="2-workflow.html#r-errors"><i class="fa fa-check"></i><b>2.3.1</b> R errors</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-workflow.html"><a href="2-workflow.html#markdown-errors"><i class="fa fa-check"></i><b>2.3.2</b> Markdown errors</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-workflow.html"><a href="2-workflow.html#latex-errors"><i class="fa fa-check"></i><b>2.3.3</b> LaTeX errors</a></li>
+<li class="chapter" data-level="2.3.4" data-path="2-workflow.html"><a href="2-workflow.html#where-to-find-help"><i class="fa fa-check"></i><b>2.3.4</b> Where to find help</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-workflow.html"><a href="2-workflow.html#writing-environment-the-fun-part"><i class="fa fa-check"></i><b>2.4</b> Writing environment (the fun part)</a></li>
+<li class="chapter" data-level="2.5" data-path="2-workflow.html"><a href="2-workflow.html#getting-feedback-for-your-thesis"><i class="fa fa-check"></i><b>2.5</b> Getting feedback for your thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-additional-functions.html"><a href="3-additional-functions.html"><i class="fa fa-check"></i><b>3</b> Additional functions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="3-additional-functions.html"><a href="3-additional-functions.html#kableextra"><i class="fa fa-check"></i><b>3.1</b> kableExtra</a></li>
+<li class="chapter" data-level="3.2" data-path="3-additional-functions.html"><a href="3-additional-functions.html#writing-and-editing-tex"><i class="fa fa-check"></i><b>3.2</b> Writing and editing TeX</a></li>
+<li class="chapter" data-level="3.3" data-path="3-additional-functions.html"><a href="3-additional-functions.html#formatting-figure-captions"><i class="fa fa-check"></i><b>3.3</b> Formatting figure captions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a>
+<ul>
+<li class="chapter" data-level="3.4" data-path="conclusion.html"><a href="conclusion.html#more-info"><i class="fa fa-check"></i><b>3.4</b> More info</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
-<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="A" data-path="A-further-resources.html"><a href="A-further-resources.html"><i class="fa fa-check"></i><b>A</b> Further resources</a></li>
+<li class="chapter" data-level="B" data-path="B-the-second-appendix.html"><a href="B-the-second-appendix.html"><i class="fa fa-check"></i><b>B</b> The second appendix</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -182,21 +230,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="getting-started" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Getting started</h1>
+<div id="getting-started" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Getting started<a href="1-getting-started.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>If you’ve reached this step, you should have already installed the <strong>gaelsdown</strong> and <strong>tinytex</strong> packages and knit your first document (this one!). If not, first take a look at the <a href="https://github.com/eugenesit/gaelsdown#readme">README</a> for instructions explaining these steps.</p>
-<div id="writing-in-markdown" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Writing in markdown</h2>
+<div id="writing-in-markdown" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Writing in markdown<a href="1-getting-started.html#writing-in-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In <strong>RStudio</strong>, you write in <strong>Pandoc Markdown</strong> to generate publishable documents. That means this is a valuable skill even if you’re not using a LaTeX template, and it’s also an easy skill to pick up. The basic principle behind markdown is that it should be easy to read even in plain text, and it accomplishes this by using special characters in intuitive ways.</p>
 <p>For example, to <em>italicize</em> (emphasis) a word or line of text, you place it inside a pair of underscores or asterisks like so: <code>_italicize_</code>. To make a line <strong>boldface</strong> (strong emphasis), you put with two underscores or asterisks: <code>__boldface__</code>.</p>
-<p>Where you start to get into real power of markdown is the ability to structure a document, such as by using headers. I mark the beginning of this chapter with a level-one header, <code># Getting started</code>, and the beginning of this section with a level-two header, <code>## Writing in markdown</code>. If, say, we wanted to jump to another chapter, I could include a link using the header name <code>[Introduction]</code>: <a href="index.html#introduction">Introduction</a>.</p>
+<p>Where you start to get into real power of markdown is the ability to structure a document, such as by using headers. I mark the beginning of this chapter with a level-one header, <code># Getting started</code>, and the beginning of this section with a level-two header, <code>## Writing in markdown</code>. If, say, we wanted to jump to another chapter, I could include a link using the header name <code>[Introduction]</code>: <a href="introduction.html#introduction">Introduction</a>.</p>
 <p>For a full primer on the features available in Pandoc Markdown, including the ability to insert lists, blockquotes, code chunks, and math, read <a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html">this tutorial</a>.</p>
 </div>
-<div id="figures-and-tables-in-r-markdown" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Figures and tables in R markdown</h2>
+<div id="figures-and-tables-in-r-markdown" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Figures and tables in R markdown<a href="1-getting-started.html#figures-and-tables-in-r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you looked through the <a href="https://rmarkdown.rstudio.com/authoring_pandoc_markdown.html">Pandoc Markdown tutorial</a>, you may have noticed that there are features to include tables and images. However, the beauty of R markdown is that you can insert tables and figures using R code, then allow <strong>knitr</strong> to convert this code into a markdown format. To do this, I’ll first need to load some R packages:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="1-getting-started.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of packages required for this analysis</span></span>
-<span id="cb1-2"><a href="1-getting-started.html#cb1-2" aria-hidden="true" tabindex="-1"></a>pkg <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;bookdown&quot;</span>, <span class="st">&quot;devtools&quot;</span>)</span>
+<span id="cb1-2"><a href="1-getting-started.html#cb1-2" aria-hidden="true" tabindex="-1"></a>pkg <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;bookdown&quot;</span>, <span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;DiagrammeR&quot;</span>)</span>
 <span id="cb1-3"><a href="1-getting-started.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if packages are not installed and assign the</span></span>
 <span id="cb1-4"><a href="1-getting-started.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># names of the packages not installed to the variable new.pkg</span></span>
 <span id="cb1-5"><a href="1-getting-started.html#cb1-5" aria-hidden="true" tabindex="-1"></a>new.pkg <span class="ot">&lt;-</span> pkg[<span class="sc">!</span>(pkg <span class="sc">%in%</span> <span class="fu">installed.packages</span>())]</span>
@@ -207,108 +255,275 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-10"><a href="1-getting-started.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages (This can be accomplished by just loading gaelsdown)</span></span>
 <span id="cb1-11"><a href="1-getting-started.html#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gaelsdown)</span></code></pre></div>
 <p>Once the packages are loaded, I can assemble a basic table with R like so:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="1-getting-started.html#cb2-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">kable</span>()</span></code></pre></div>
-<table>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="1-getting-started.html#cb2-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> <span class="fu">head</span>() <span class="sc">%&gt;%</span> <span class="fu">kable</span>() <span class="sc">%&gt;%</span> <span class="fu">kable_styling</span>(<span class="at">latex_options =</span> <span class="st">&quot;scale_down&quot;</span>)</span></code></pre></div>
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">mpg</th>
-<th align="right">cyl</th>
-<th align="right">disp</th>
-<th align="right">hp</th>
-<th align="right">drat</th>
-<th align="right">wt</th>
-<th align="right">qsec</th>
-<th align="right">vs</th>
-<th align="right">am</th>
-<th align="right">gear</th>
-<th align="right">carb</th>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+mpg
+</th>
+<th style="text-align:right;">
+cyl
+</th>
+<th style="text-align:right;">
+disp
+</th>
+<th style="text-align:right;">
+hp
+</th>
+<th style="text-align:right;">
+drat
+</th>
+<th style="text-align:right;">
+wt
+</th>
+<th style="text-align:right;">
+qsec
+</th>
+<th style="text-align:right;">
+vs
+</th>
+<th style="text-align:right;">
+am
+</th>
+<th style="text-align:right;">
+gear
+</th>
+<th style="text-align:right;">
+carb
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">Mazda RX4</td>
-<td align="right">21.0</td>
-<td align="right">6</td>
-<td align="right">160</td>
-<td align="right">110</td>
-<td align="right">3.90</td>
-<td align="right">2.620</td>
-<td align="right">16.46</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">4</td>
+<tr>
+<td style="text-align:left;">
+Mazda RX4
+</td>
+<td style="text-align:right;">
+21.0
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+160
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+3.90
+</td>
+<td style="text-align:right;">
+2.620
+</td>
+<td style="text-align:right;">
+16.46
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
 </tr>
-<tr class="even">
-<td align="left">Mazda RX4 Wag</td>
-<td align="right">21.0</td>
-<td align="right">6</td>
-<td align="right">160</td>
-<td align="right">110</td>
-<td align="right">3.90</td>
-<td align="right">2.875</td>
-<td align="right">17.02</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">4</td>
+<tr>
+<td style="text-align:left;">
+Mazda RX4 Wag
+</td>
+<td style="text-align:right;">
+21.0
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+160
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+3.90
+</td>
+<td style="text-align:right;">
+2.875
+</td>
+<td style="text-align:right;">
+17.02
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Datsun 710</td>
-<td align="right">22.8</td>
-<td align="right">4</td>
-<td align="right">108</td>
-<td align="right">93</td>
-<td align="right">3.85</td>
-<td align="right">2.320</td>
-<td align="right">18.61</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">4</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:left;">
+Datsun 710
+</td>
+<td style="text-align:right;">
+22.8
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+108
+</td>
+<td style="text-align:right;">
+93
+</td>
+<td style="text-align:right;">
+3.85
+</td>
+<td style="text-align:right;">
+2.320
+</td>
+<td style="text-align:right;">
+18.61
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="even">
-<td align="left">Hornet 4 Drive</td>
-<td align="right">21.4</td>
-<td align="right">6</td>
-<td align="right">258</td>
-<td align="right">110</td>
-<td align="right">3.08</td>
-<td align="right">3.215</td>
-<td align="right">19.44</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:left;">
+Hornet 4 Drive
+</td>
+<td style="text-align:right;">
+21.4
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+258
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+3.08
+</td>
+<td style="text-align:right;">
+3.215
+</td>
+<td style="text-align:right;">
+19.44
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Hornet Sportabout</td>
-<td align="right">18.7</td>
-<td align="right">8</td>
-<td align="right">360</td>
-<td align="right">175</td>
-<td align="right">3.15</td>
-<td align="right">3.440</td>
-<td align="right">17.02</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">2</td>
+<tr>
+<td style="text-align:left;">
+Hornet Sportabout
+</td>
+<td style="text-align:right;">
+18.7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+360
+</td>
+<td style="text-align:right;">
+175
+</td>
+<td style="text-align:right;">
+3.15
+</td>
+<td style="text-align:right;">
+3.440
+</td>
+<td style="text-align:right;">
+17.02
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
 </tr>
-<tr class="even">
-<td align="left">Valiant</td>
-<td align="right">18.1</td>
-<td align="right">6</td>
-<td align="right">225</td>
-<td align="right">105</td>
-<td align="right">2.76</td>
-<td align="right">3.460</td>
-<td align="right">20.22</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">3</td>
-<td align="right">1</td>
+<tr>
+<td style="text-align:left;">
+Valiant
+</td>
+<td style="text-align:right;">
+18.1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+225
+</td>
+<td style="text-align:right;">
+105
+</td>
+<td style="text-align:right;">
+2.76
+</td>
+<td style="text-align:right;">
+3.460
+</td>
+<td style="text-align:right;">
+20.22
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
 </tbody>
 </table>
@@ -316,77 +531,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="1-getting-started.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span></span>
 <span id="cb3-2"><a href="1-getting-started.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb3-3"><a href="1-getting-started.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="thesis_files/figure-html/cars-figure-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>I’ll have some tips on how to make your tables and figures look great in the next chapter on [Advanced methods].</p>
+<p><img src="thesis_files/figure-html/cars-figure-1.png" width="528" style="display: block; margin: auto;" /></p>
+<p>I’ll have some tips on how to make your tables and figures look great in the next chapter on <a href="3-additional-functions.html#additional-functions">Additional functions</a>.</p>
 </div>
-<div id="assembling-your-thesis" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assembling your thesis</h2>
+<div id="assembling-your-thesis" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Assembling your thesis<a href="1-getting-started.html#assembling-your-thesis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Although the final product you obtain using <strong>gaelsdown</strong> will likely be a single document contained in one file, there are multiple files that go into creating this document. There’s a simplicity to this in that each individual file has a specific function within the larger document, and I’ll explain how you can customize the structure of your thesis by adding or removing certain files or sections.</p>
-<div id="yaml-aint-markup-language" class="section level3" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> YAML Ain’t Markup Language</h3>
+<div id="yaml-aint-markup-language" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> YAML Ain’t Markup Language<a href="1-getting-started.html#yaml-aint-markup-language" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Every thesis generated using this template has an <strong>index.Rmd</strong> file. This is the file you use to knit the document, and it contains your <strong>YAML</strong> section (recursively named, “YAML Ain’t Markup Language”). Information from the <strong>YAML</strong> is passed onto <strong>Pandoc</strong>, and may include specifications for the output format and other options. You can also include <em>frontmatter</em> material here, such as your abstract.</p>
 <p>Open up <strong>index.Rmd</strong> in RStudio to see what the YAML looks like. It’s the section at the beginning bracketed by three dashes:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="1-getting-started.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="cb4-2"><a href="1-getting-started.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="1-getting-started.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div>
-<p>You need to be particularly attentive to the spaces in the YAML, so make sure when uncommenting lines you only remove the <code>#</code> and not the spaces!</p>
+<p>Note: You need to be particularly attentive to the spaces in the YAML, so make sure when uncommenting lines you only remove the <code>#</code> and not the spaces!</p>
 <p>At the top of the YAML are some pieces of information that get passed along to the title page, such as the title and author name. Since the format for title pages are set for Queen’s University, you’ll want to change the answers to these entries, but not which lines are included (To change the format of the title page, you’d have to go into the .tex template).</p>
 <p>Following this you’ll find your <code>output</code> options. Here, you have the option of either PDF, gitbook (web page), Word, and EPUB; to change the format, just comment out the active line and uncomment the appropriate line. After this are lines for your introductory material: abstract, acknowledgements, glossary, etc. These sections are <em>frontmatter</em>, will appear before the Table of Contents, are numbered with Roman instead of Arabic numerals, and won’t be labelled as chapters.</p>
 <p>Frontmatter is a bit quirky in that it needs to be read directly into LaTeX, so the frontmatter sections have to be defined in the .tex template and the YAML. I’ve defined all of the required and optional frontmatter sections specified for Queen’s University theses, with some of them commented out. If you want to include frontmatter in another output format such as Word, then it has to be defined in the body of the .Rmd file, not the YAML.</p>
 <p>After this are instructions for your references section. There’s some defaults here for this document but you’ll want to specify your own <strong>bib</strong> and <strong>csl</strong> file. The process for using these are the same as in <strong>bookdown</strong>, so for instructions on how to specify the <code>bibliography</code> and <code>csl</code> sections, follow Yihui Xie’s tutorial <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">here</a>.</p>
 </div>
-<div id="folders-and-files" class="section level3" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Folders and files</h3>
+<div id="folders-and-files" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Folders and files<a href="1-getting-started.html#folders-and-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Upon creating your <em>gaelsdown</em> project in RStudio, your folder will have the following files and folders:</p>
-<div id="bib" class="section level4" number="1.3.2.1">
-<h4><span class="header-section-number">1.3.2.1</span> bib/</h4>
-<p>In here is your .bib file, specified in the YAML.</p>
+<div id="bib" class="section level4 hasAnchor" number="1.3.2.1">
+<h4><span class="header-section-number">1.3.2.1</span> bib/<a href="1-getting-started.html#bib" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The .bib file lists the references that you use in your thesis, and the name of your .bib should be specified in the YAML.</p>
 </div>
-<div id="csl" class="section level4" number="1.3.2.2">
-<h4><span class="header-section-number">1.3.2.2</span> csl/</h4>
-<p>In here is your .csl file, specified in the YAML.</p>
+<div id="csl" class="section level4 hasAnchor" number="1.3.2.2">
+<h4><span class="header-section-number">1.3.2.2</span> csl/<a href="1-getting-started.html#csl" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The .csl file defines the formatting for references in your thesis, and .csl files matching the format for specific journals can be found online. The file name should also be specified in the YAML.</p>
 </div>
-<div id="data-and-figure" class="section level4" number="1.3.2.3">
-<h4><span class="header-section-number">1.3.2.3</span> data/ and figure/</h4>
-<p>These are just folders for example data and figures; you can set the folders as you wish for scripts, etc.</p>
+<div id="data-and-figure" class="section level4 hasAnchor" number="1.3.2.3">
+<h4><span class="header-section-number">1.3.2.3</span> data/ and figure/<a href="1-getting-started.html#data-and-figure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>These are just folders for example data and figures; you can set the folders as you wish for other files (e.g. a <code>R/</code> folder for scripts).</p>
 </div>
-<div id="bookdown.yml" class="section level4" number="1.3.2.4">
-<h4><span class="header-section-number">1.3.2.4</span> _bookdown.yml</h4>
+<div id="bookdown.yml" class="section level4 hasAnchor" number="1.3.2.4">
+<h4><span class="header-section-number">1.3.2.4</span> _bookdown.yml<a href="1-getting-started.html#bookdown.yml" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Configuration file for <strong>bookdown</strong>, the package underlying <strong>gaelsdown</strong>. You can change the output file and chapter prefixes here; see the <a href="https://bookdown.org/yihui/bookdown/configuration.html">bookdown reference</a> for more information.</p>
 </div>
-<div id="chap1.rmd-02-chap2.rmd" class="section level4" number="1.3.2.5">
-<h4><span class="header-section-number">1.3.2.5</span> 01-chap1.Rmd, 02-chap2.Rmd…</h4>
+<div id="chap1.rmd-02-chap2.rmd" class="section level4 hasAnchor" number="1.3.2.5">
+<h4><span class="header-section-number">1.3.2.5</span> 01-chap1.Rmd, 02-chap2.Rmd…<a href="1-getting-started.html#chap1.rmd-02-chap2.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>These are the main chapters of your thesis, which <strong>gaelsdown</strong> will join into one document. The .Rmd files in your main directory will all be knit together, so you can add as many files as you need and it’s not necessary to follow this naming format (it just makes things easier to read).</p>
 </div>
-<div id="references.rmd" class="section level4" number="1.3.2.6">
-<h4><span class="header-section-number">1.3.2.6</span> 98-references.Rmd</h4>
-<p>Your references come after every section apart from the appendix.</p>
+<div id="references.rmd" class="section level4 hasAnchor" number="1.3.2.6">
+<h4><span class="header-section-number">1.3.2.6</span> 98-references.Rmd<a href="1-getting-started.html#references.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Your references come after every section apart from the appendices.</p>
 </div>
-<div id="appendix.rmd" class="section level4" number="1.3.2.7">
-<h4><span class="header-section-number">1.3.2.7</span> 99-appendix.Rmd</h4>
+<div id="appendix.rmd" class="section level4 hasAnchor" number="1.3.2.7">
+<h4><span class="header-section-number">1.3.2.7</span> 99-appendix.Rmd<a href="1-getting-started.html#appendix.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The appendices come after the references. You can add as many appendix sections as necessary.</p>
 </div>
+<div id="prelims" class="section level4 hasAnchor" number="1.3.2.8">
+<h4><span class="header-section-number">1.3.2.8</span> prelims/<a href="1-getting-started.html#prelims" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Files for your abstract, acknowledgements, and other files can go in here so that they are not automatically knit like chapters but instead inserted ahead of the table of contents according to YAML instructions. I’ve written in if statements to check whether the output is LaTeX or not to decide how to insert these files.</p>
 </div>
-<div id="library-calls-and-importing-data" class="section level3" number="1.3.3">
-<h3><span class="header-section-number">1.3.3</span> Library calls and importing data</h3>
-<p>To</p>
 </div>
 </div>
-<div id="summary" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Summary</h2>
-<p>In this section, I’ve covered</p>
-<p>Within your</p>
-<ul>
-<li>Index.Rmd: YAML
-<ul>
-<li>frontmatter</li>
-<li>yaml instructions</li>
-<li>bib and cls files</li>
-</ul></li>
-<li>Library calls and data import</li>
-<li>Folder structure</li>
-</ul>
-<p>Diagram!</p>
+<div id="summary" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Summary<a href="1-getting-started.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, I’ve covered markdown basics including text formatting, headers, and links. I’ve introduced how to add figures and tables to your thesis, how YAML is used to configure your output, and the different contents of your <em>gaelsdown</em> project.</p>
 
 </div>
 </div>
@@ -395,12 +598,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="2-additional-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="2-workflow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -419,6 +621,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -439,6 +642,10 @@ gitbook.start({
 "text": null
 },
 "download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }

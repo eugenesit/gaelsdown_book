@@ -1,7 +1,56 @@
-# Additional methods
+# Workflow
 
-This section is still in the works.
+In the previous chapter, I introduced the necessary basics for using **gaelsdown** to write your thesis: markdown language, YAML, and the document structure. In this chapter, I'll describe some recommended practices to integrate **gaelsdown** neatly into your thesis writing and some basic troubleshooting advice.
+
+## Data files and scripts
+
+While your R markdown files will contain the text, tables, and figures for your thesis, you will likely have a workflow set up to process your raw data and generate your analyses. I recommend keeping this workflow separate as R scripts (.R file extension), generating data that will be used by the R markdown scripts read by **gaelsdown**. You can then tell your R scripts to produce data in the form of .csv or .RData, then read in these files in the R markdown along with code to generate figures and tables.
+
+### `targets` package
+
+An approach you may want to consider adopting is using [`targets`](https://books.ropensci.org/targets/) (formerly `drake`) to organize your R workflow. This package works well with piped commands from `magrittr` used in tidyverse.
+
+The advantage of using targets is that you can modify sections of your pipeline, and the function will automatically identify which computation needs to be run and which does not. Objects generated inside a targets function are written into a cache, and this works well with gaelsdown because those cached objects can be read into your R markdown files. You can do your data processing analysis using .R scripts, and only need to load that data and include the code in the R markdown files for generating your figures and tables.
+
+You can find an interactive tutorial on how to use `targets` [here](https://github.com/wlandau/targets-tutorial).
 
 ## Version control
 
-## kableExtra
+With your **gaelsdown** thesis set up as a project, it's easy to integrate git into your workflow through RStudio. This will help you to identify errors when they're introduced (see troubleshooting) and can be used for collaboration. The easiest way is through GitHub.
+
+With a **gaelsdown** project, you may not want to include all of the automatically-generated files in your git. Instead, you should set these files to be ignored in the .gitignore (more about setting gitignore):
+
+* _book/
+* _bookdown_files/
+
+## Troubleshooting
+
+Perhaps the biggest challenge of working with **gaelsdown** comes from the fact that involves different software working together (see ). This means that errors can be introduced at different stages of your document assembly.
+
+Thankfully, it's relatively easy to determine where the error is introduced, which helps a lot with resolving these errors. When you knit the index.Rmd, the rendering will follow a set sequence, so the source of the error will be apparent in the Render panel in RStudio (see Figure \@ref(fig:knit-diagram)). You may need to check that your installations for requisite packages are up to date (such as rmarkdown, tinytex).
+
+### R errors
+
+These are errors that prevent your R code from running, such as syntax errors missing functions.
+
+### Markdown errors
+
+Markdown is not especially sensitive to errors, so faults are more likely to appear in your document.
+
+### `r if(knitr:::is_latex_output()){"\\LaTeX\\"} else {"LaTeX"}` errors
+
+LaTeX errors may be introduced if you have modified the underlying .tex or .cls files, if you have inserted LaTeX commands directly into your markdown, or if you use functions that pass instructions onto LaTeX. If you encounter errors at this stage, a .tex file will have been generated which will help with identifying the source of the error.
+
+### Where to find help
+
+There's a couple places you can look for help with **gaelsdown**. If you have identified a particular error, you can try to enter the error message or keywords into a web search and see if there are any entries. Some of these may point you to stackoverflow, a useful resource for tapping the expertise that is out there.
+
+Additionally, you can seek help directly from the creators of this package (gaelsdown) and underlying packages (bookdown, thesisdown). Visit the github pages for these packages and take a look through existing issues. If you cannot find the issue described, submit an issue of your own!
+
+## Writing environment (the fun part)
+
+Although being able to write your entire thesis using R markdown means you could write your whole thesis in RStudio, that doesn't mean you have to! However, a traditional document editor like Microsoft Word is not suited to editing markdown files (although there are now plugins available that you can try) since it will either leave your document unformatted or insert its own formatting code into your files. Instead, you can use a markdown editor to open your .Rmd files, which will recognize the formatting and provide a visually pleasing and focused environment for writing. These programs are available for free or a low cost, and I used [Typora](http://typora.io) for my own thesis.
+
+## Getting feedback for your thesis
+
+Because much of the formatting for the **gaelsdown** output relies on the TeX engine, HTML and Microsoft Word outputs will not reflect the finished product. However, Word documents are useful for tracking changes and if you are getting feedback from your supervisor on your thesis this way, you will have to manually enter the changes into your underlying .Rmd files. Additionally, knitting directly to a .doc file often results in issues with tables and figures. If you do need a .doc output, you may want to try knitting to a gitbook (HTML), then opening and saving the respective HTML files as word files.

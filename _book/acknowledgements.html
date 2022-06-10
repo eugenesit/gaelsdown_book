@@ -4,19 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A The First Appendix | My Thesis</title>
-  <meta name="description" content="A The First Appendix | My Thesis" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <title>Acknowledgements | My Thesis</title>
+  <meta name="description" content="Acknowledgements | My Thesis" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A The First Appendix | My Thesis" />
+  <meta property="og:title" content="Acknowledgements | My Thesis" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A The First Appendix | My Thesis" />
+  <meta name="twitter:title" content="Acknowledgements | My Thesis" />
   
   
   
@@ -30,10 +29,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="references.html"/>
-<link rel="next" href="B-the-second-appendix-for-fun.html"/>
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="introduction.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,9 +48,15 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -119,6 +124,29 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 </head>
 
 <body>
@@ -133,12 +161,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li><a href="./"></a></li>
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#welcome"><i class="fa fa-check"></i>Welcome</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#motivation"><i class="fa fa-check"></i>Motivation</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#structure"><i class="fa fa-check"></i>Structure</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#welcome"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i>Motivation</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#structure"><i class="fa fa-check"></i>Structure</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="1-getting-started.html"><a href="1-getting-started.html"><i class="fa fa-check"></i><b>1</b> Getting started</a>
 <ul>
@@ -148,21 +177,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.3.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.3.1</b> YAML Ain’t Markup Language</a></li>
 <li class="chapter" data-level="1.3.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.3.2</b> Folders and files</a></li>
-<li class="chapter" data-level="1.3.3" data-path="1-getting-started.html"><a href="1-getting-started.html#library-calls-and-importing-data"><i class="fa fa-check"></i><b>1.3.3</b> Library calls and importing data</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="2-additional-methods.html"><a href="2-additional-methods.html"><i class="fa fa-check"></i><b>2</b> Additional methods</a>
+<li class="chapter" data-level="2" data-path="2-workflow.html"><a href="2-workflow.html"><i class="fa fa-check"></i><b>2</b> Workflow</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="2-additional-methods.html"><a href="2-additional-methods.html#version-control"><i class="fa fa-check"></i><b>2.1</b> Version control</a></li>
-<li class="chapter" data-level="2.2" data-path="2-additional-methods.html"><a href="2-additional-methods.html#kableextra"><i class="fa fa-check"></i><b>2.2</b> kableExtra</a></li>
+<li class="chapter" data-level="2.1" data-path="2-workflow.html"><a href="2-workflow.html#data-files-and-scripts"><i class="fa fa-check"></i><b>2.1</b> Data files and scripts</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="2-workflow.html"><a href="2-workflow.html#targets-package"><i class="fa fa-check"></i><b>2.1.1</b> <code>targets</code> package</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="3-understanding-how-gaelsdown-works-and-troubleshooting.html"><a href="3-understanding-how-gaelsdown-works-and-troubleshooting.html"><i class="fa fa-check"></i><b>3</b> Understanding how gaelsdown works and troubleshooting</a></li>
-<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="chapter" data-level="2.2" data-path="2-workflow.html"><a href="2-workflow.html#version-control"><i class="fa fa-check"></i><b>2.2</b> Version control</a></li>
+<li class="chapter" data-level="2.3" data-path="2-workflow.html"><a href="2-workflow.html#troubleshooting"><i class="fa fa-check"></i><b>2.3</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="2-workflow.html"><a href="2-workflow.html#r-errors"><i class="fa fa-check"></i><b>2.3.1</b> R errors</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-workflow.html"><a href="2-workflow.html#markdown-errors"><i class="fa fa-check"></i><b>2.3.2</b> Markdown errors</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-workflow.html"><a href="2-workflow.html#latex-errors"><i class="fa fa-check"></i><b>2.3.3</b> LaTeX errors</a></li>
+<li class="chapter" data-level="2.3.4" data-path="2-workflow.html"><a href="2-workflow.html#where-to-find-help"><i class="fa fa-check"></i><b>2.3.4</b> Where to find help</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-workflow.html"><a href="2-workflow.html#writing-environment-the-fun-part"><i class="fa fa-check"></i><b>2.4</b> Writing environment (the fun part)</a></li>
+<li class="chapter" data-level="2.5" data-path="2-workflow.html"><a href="2-workflow.html#getting-feedback-for-your-thesis"><i class="fa fa-check"></i><b>2.5</b> Getting feedback for your thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-additional-functions.html"><a href="3-additional-functions.html"><i class="fa fa-check"></i><b>3</b> Additional functions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="3-additional-functions.html"><a href="3-additional-functions.html#kableextra"><i class="fa fa-check"></i><b>3.1</b> kableExtra</a></li>
+<li class="chapter" data-level="3.2" data-path="3-additional-functions.html"><a href="3-additional-functions.html#writing-and-editing-tex"><i class="fa fa-check"></i><b>3.2</b> Writing and editing TeX</a></li>
+<li class="chapter" data-level="3.3" data-path="3-additional-functions.html"><a href="3-additional-functions.html#formatting-figure-captions"><i class="fa fa-check"></i><b>3.3</b> Formatting figure captions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a>
+<ul>
+<li class="chapter" data-level="3.4" data-path="conclusion.html"><a href="conclusion.html#more-info"><i class="fa fa-check"></i><b>3.4</b> More info</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
-<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="A" data-path="A-further-resources.html"><a href="A-further-resources.html"><i class="fa fa-check"></i><b>A</b> Further resources</a></li>
+<li class="chapter" data-level="B" data-path="B-the-second-appendix.html"><a href="B-the-second-appendix.html"><i class="fa fa-check"></i><b>B</b> The second appendix</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -182,36 +230,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-first-appendix" class="section level1" number="4">
-<h1><span class="header-section-number">A</span> The First Appendix</h1>
-<p>This first appendix includes all of the R chunks of code that were hidden throughout the document (using the <code>include = FALSE</code> chunk tag) to help with readability and/or setup.</p>
-<p><strong>In the main Rmd file</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="A-the-first-appendix.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># By default tinytex only compiles once; compiling multiple</span></span>
-<span id="cb5-2"><a href="A-the-first-appendix.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># times is necessary to ensure the List of Figures and List of Tables</span></span>
-<span id="cb5-3"><a href="A-the-first-appendix.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># page numbers are correct if listed in the Table of Contents</span></span>
-<span id="cb5-4"><a href="A-the-first-appendix.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tinytex.compile.min_times =</span> <span class="dv">3</span>)</span>
-<span id="cb5-5"><a href="A-the-first-appendix.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="A-the-first-appendix.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># This chunk ensures that the gaelsdown package is</span></span>
-<span id="cb5-7"><a href="A-the-first-appendix.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># installed and loaded. This gaelsdown package includes</span></span>
-<span id="cb5-8"><a href="A-the-first-appendix.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># the template files for the thesis.</span></span>
-<span id="cb5-9"><a href="A-the-first-appendix.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(devtools))</span>
-<span id="cb5-10"><a href="A-the-first-appendix.html#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
-<span id="cb5-11"><a href="A-the-first-appendix.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(gaelsdown))</span>
-<span id="cb5-12"><a href="A-the-first-appendix.html#cb5-12" aria-hidden="true" tabindex="-1"></a>  devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;eugenesit/gaelsdown&quot;</span>)</span>
-<span id="cb5-13"><a href="A-the-first-appendix.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gaelsdown)</span></code></pre></div>
-<p><strong>In Chapter <a href="#ref-labels"><strong>??</strong></a>:</strong></p>
+<div id="acknowledgements" class="section level1 unnumbered hasAnchor">
+<h1>Acknowledgements<a href="acknowledgements.html#acknowledgements" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This package was possible thanks to the work of Chester Ismay in developing <strong>thesisdown</strong> and Yihui Xie and other contributors in developing <strong>bookdown</strong>. Further acknowledgements for the development of the LaTeX template can be found in the template.tex and queensuthesis.cls files.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="references.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="B-the-second-appendix-for-fun.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -230,6 +262,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -250,6 +283,10 @@ gitbook.start({
 "text": null
 },
 "download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }

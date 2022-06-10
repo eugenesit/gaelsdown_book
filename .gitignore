@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+thesis.log
+thesis.Rmd
+diagram.R

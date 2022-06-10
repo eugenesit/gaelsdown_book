@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>My Thesis</title>
-  <meta name="description" content="My Thesis" />
+  <title>Chapter 2 Workflow | My Thesis</title>
+  <meta name="description" content="Chapter 2 Workflow | My Thesis" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="My Thesis" />
+  <meta property="og:title" content="Chapter 2 Workflow | My Thesis" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My Thesis" />
+  <meta name="twitter:title" content="Chapter 2 Workflow | My Thesis" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="acknowledgements.html"/>
+<link rel="prev" href="1-getting-started.html"/>
+<link rel="next" href="3-additional-functions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -230,22 +230,67 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">My Thesis</h1>
-<p class="author"><em>Your R. Name</em></p>
+<div id="workflow" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Workflow<a href="2-workflow.html#workflow" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In the previous chapter, I introduced the necessary basics for using <strong>gaelsdown</strong> to write your thesis: markdown language, YAML, and the document structure. In this chapter, I’ll describe some recommended practices to integrate <strong>gaelsdown</strong> neatly into your thesis writing and some basic troubleshooting advice.</p>
+<div id="data-files-and-scripts" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Data files and scripts<a href="2-workflow.html#data-files-and-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While your R markdown files will contain the text, tables, and figures for your thesis, you will likely have a workflow set up to process your raw data and generate your analyses. I recommend keeping this workflow separate as R scripts (.R file extension), generating data that will be used by the R markdown scripts read by <strong>gaelsdown</strong>. You can then tell your R scripts to produce data in the form of .csv or .RData, then read in these files in the R markdown along with code to generate figures and tables.</p>
+<div id="targets-package" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> <code>targets</code> package<a href="2-workflow.html#targets-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An approach you may want to consider adopting is using <a href="https://books.ropensci.org/targets/"><code>targets</code></a> (formerly <code>drake</code>) to organize your R workflow. This package works well with piped commands from <code>magrittr</code> used in tidyverse.</p>
+<p>The advantage of using targets is that you can modify sections of your pipeline, and the function will automatically identify which computation needs to be run and which does not. Objects generated inside a targets function are written into a cache, and this works well with gaelsdown because those cached objects can be read into your R markdown files. You can do your data processing analysis using .R scripts, and only need to load that data and include the code in the R markdown files for generating your figures and tables.</p>
+<p>You can find an interactive tutorial on how to use <code>targets</code> <a href="https://github.com/wlandau/targets-tutorial">here</a>.</p>
 </div>
-<div id="abstract" class="section level1 unnumbered hasAnchor">
-<h1>Abstract<a href="index.html#abstract" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-This is a placeholder for including an abstract.
-<p>Second paragraph of abstract starts here.</p>
+</div>
+<div id="version-control" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Version control<a href="2-workflow.html#version-control" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>With your <strong>gaelsdown</strong> thesis set up as a project, it’s easy to integrate git into your workflow through RStudio. This will help you to identify errors when they’re introduced (see troubleshooting) and can be used for collaboration. The easiest way is through GitHub.</p>
+<p>With a <strong>gaelsdown</strong> project, you may not want to include all of the automatically-generated files in your git. Instead, you should set these files to be ignored in the .gitignore (more about setting gitignore):</p>
+<ul>
+<li>_book/</li>
+<li>_bookdown_files/</li>
+</ul>
+</div>
+<div id="troubleshooting" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Troubleshooting<a href="2-workflow.html#troubleshooting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Perhaps the biggest challenge of working with <strong>gaelsdown</strong> comes from the fact that involves different software working together (see ). This means that errors can be introduced at different stages of your document assembly.</p>
+<p>Thankfully, it’s relatively easy to determine where the error is introduced, which helps a lot with resolving these errors. When you knit the index.Rmd, the rendering will follow a set sequence, so the source of the error will be apparent in the Render panel in RStudio (see Figure <a href="introduction.html#fig:knit-diagram">0.1</a>). You may need to check that your installations for requisite packages are up to date (such as rmarkdown, tinytex).</p>
+<div id="r-errors" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> R errors<a href="2-workflow.html#r-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>These are errors that prevent your R code from running, such as syntax errors missing functions.</p>
+</div>
+<div id="markdown-errors" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Markdown errors<a href="2-workflow.html#markdown-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Markdown is not especially sensitive to errors, so faults are more likely to appear in your document.</p>
+</div>
+<div id="latex-errors" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> LaTeX errors<a href="2-workflow.html#latex-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>LaTeX errors may be introduced if you have modified the underlying .tex or .cls files, if you have inserted LaTeX commands directly into your markdown, or if you use functions that pass instructions onto LaTeX. If you encounter errors at this stage, a .tex file will have been generated which will help with identifying the source of the error.</p>
+</div>
+<div id="where-to-find-help" class="section level3 hasAnchor" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> Where to find help<a href="2-workflow.html#where-to-find-help" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There’s a couple places you can look for help with <strong>gaelsdown</strong>. If you have identified a particular error, you can try to enter the error message or keywords into a web search and see if there are any entries. Some of these may point you to stackoverflow, a useful resource for tapping the expertise that is out there.</p>
+<p>Additionally, you can seek help directly from the creators of this package (gaelsdown) and underlying packages (bookdown, thesisdown). Visit the github pages for these packages and take a look through existing issues. If you cannot find the issue described, submit an issue of your own!</p>
+</div>
+</div>
+<div id="writing-environment-the-fun-part" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Writing environment (the fun part)<a href="2-workflow.html#writing-environment-the-fun-part" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Although being able to write your entire thesis using R markdown means you could write your whole thesis in RStudio, that doesn’t mean you have to! However, a traditional document editor like Microsoft Word is not suited to editing markdown files (although there are now plugins available that you can try) since it will either leave your document unformatted or insert its own formatting code into your files. Instead, you can use a markdown editor to open your .Rmd files, which will recognize the formatting and provide a visually pleasing and focused environment for writing. These programs are available for free or a low cost, and I used <a href="http://typora.io">Typora</a> for my own thesis.</p>
+</div>
+<div id="getting-feedback-for-your-thesis" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Getting feedback for your thesis<a href="2-workflow.html#getting-feedback-for-your-thesis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Because much of the formatting for the <strong>gaelsdown</strong> output relies on the TeX engine, HTML and Microsoft Word outputs will not reflect the finished product. However, Word documents are useful for tracking changes and if you are getting feedback from your supervisor on your thesis this way, you will have to manually enter the changes into your underlying .Rmd files. Additionally, knitting directly to a .doc file often results in issues with tables and figures. If you do need a .doc output, you may want to try knitting to a gitbook (HTML), then opening and saving the respective HTML files as word files.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="acknowledgements.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="1-getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-additional-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

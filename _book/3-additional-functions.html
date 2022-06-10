@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>My Thesis</title>
-  <meta name="description" content="My Thesis" />
+  <title>Chapter 3 Additional functions | My Thesis</title>
+  <meta name="description" content="Chapter 3 Additional functions | My Thesis" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="My Thesis" />
+  <meta property="og:title" content="Chapter 3 Additional functions | My Thesis" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My Thesis" />
+  <meta name="twitter:title" content="Chapter 3 Additional functions | My Thesis" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="acknowledgements.html"/>
+<link rel="prev" href="2-workflow.html"/>
+<link rel="next" href="conclusion.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -230,22 +230,39 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">My Thesis</h1>
-<p class="author"><em>Your R. Name</em></p>
+<div id="additional-functions" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Additional functions<a href="3-additional-functions.html#additional-functions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This section is still in the works, and will describe some additional functions you may want to use when writing your thesis.</p>
+<div id="kableextra" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> kableExtra<a href="3-additional-functions.html#kableextra" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>kableExtra adds functions to further customize tables that knitr’s <code>kable()</code>
+function generates in R markdown. Some useful functions include being able to
+add footnotes (for example, to specific significance thresholds) or set
+formatting for individual columns or rows in a table.</p>
 </div>
-<div id="abstract" class="section level1 unnumbered hasAnchor">
-<h1>Abstract<a href="index.html#abstract" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-This is a placeholder for including an abstract.
-<p>Second paragraph of abstract starts here.</p>
+<div id="writing-and-editing-tex" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Writing and editing TeX<a href="3-additional-functions.html#writing-and-editing-tex" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can include expressions that would be rendered by TeX in your R markdown
+document; just be aware that they will not be rendered if knitting into
+other formats such as a gitbook or Word document.</p>
+</div>
+<div id="formatting-figure-captions" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Formatting figure captions<a href="3-additional-functions.html#formatting-figure-captions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Instead of writing the full figure caption in the R code chunk, you can enter
+your caption in the body of the R markdown document following the expression
+(ref:caption-name), then substitute the caption with (ref:caption-name). By
+doing so, you can include code in the caption that you would otherwise not be
+able to include, such as inline code or links to other sections of the document.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="acknowledgements.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="2-workflow.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

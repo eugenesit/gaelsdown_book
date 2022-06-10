@@ -1,3 +1,24 @@
-# Understanding how gaelsdown works and troubleshooting
+# Additional functions
 
-This section is still in the works.
+This section is still in the works, and will describe some additional functions you may want to use when writing your thesis.
+
+## kableExtra
+
+kableExtra adds functions to further customize tables that knitr's `kable()` 
+function generates in R markdown. Some useful functions include being able to
+add footnotes (for example, to specific significance thresholds) or set 
+formatting for individual columns or rows in a table.
+
+## Writing and editing TeX
+
+You can include expressions that would be rendered by TeX in your R markdown 
+document; just be aware that they will not be rendered if knitting into 
+other formats such as a gitbook or Word document.
+
+## Formatting figure captions
+
+Instead of writing the full figure caption in the R code chunk, you can enter
+your caption in the body of the R markdown document following the expression
+(ref:caption-name), then substitute the caption with (ref:caption-name). By
+doing so, you can include code in the caption that you would otherwise not be 
+able to include, such as inline code or links to other sections of the document.
