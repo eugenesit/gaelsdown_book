@@ -173,12 +173,13 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="1-getting-started.html"><a href="1-getting-started.html#writing-in-markdown"><i class="fa fa-check"></i><b>1.1</b> Writing in markdown</a></li>
 <li class="chapter" data-level="1.2" data-path="1-getting-started.html"><a href="1-getting-started.html#figures-and-tables-in-r-markdown"><i class="fa fa-check"></i><b>1.2</b> Figures and tables in R markdown</a></li>
-<li class="chapter" data-level="1.3" data-path="1-getting-started.html"><a href="1-getting-started.html#assembling-your-thesis"><i class="fa fa-check"></i><b>1.3</b> Assembling your thesis</a>
+<li class="chapter" data-level="1.3" data-path="1-getting-started.html"><a href="1-getting-started.html#math-equations-and-formulas"><i class="fa fa-check"></i><b>1.3</b> Math equations and formulas</a></li>
+<li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#assembling-your-thesis"><i class="fa fa-check"></i><b>1.4</b> Assembling your thesis</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.3.1</b> YAML Ain’t Markup Language</a></li>
-<li class="chapter" data-level="1.3.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.3.2</b> Folders and files</a></li>
+<li class="chapter" data-level="1.4.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.4.1</b> YAML Ain’t Markup Language</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.4.2</b> Folders and files</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary</a></li>
+<li class="chapter" data-level="1.5" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.5</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-workflow.html"><a href="2-workflow.html"><i class="fa fa-check"></i><b>2</b> Workflow</a>
 <ul>
@@ -265,8 +266,8 @@ div.csl-indent {
 </ul>
 <p>Here’s a visualization of how it all flows together:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:knit-diagram"></span>
-<div id="htmlwidget-ea652b6a9ac498c77d31" style="width:500px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ea652b6a9ac498c77d31">{"x":{"diagram":"\n                  digraph{\n                  graph []\n                  node [shape = rectangle, fontname = \"Courier New\", fontface = bold, style = filled]\n                    rmd [label = \"R Markdown\", fillcolor = \"#fbb4ae\"]\n                    knitr [label = \"knitr\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    pandoc [label = \"pandoc\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    word [label = \"MS Word\", fillcolor = \"#ccebc5\"]\n                    epub [label = \"EPUB\", fillcolor = \"#ccebc5\"]\n                    html [label = \"gitpages\", fillcolor = \"#ccebc5\"]\n                    blank [shape = point, width = 0, height = 0]\n                    img [label = \"graphics\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    md [label = \"markdown\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    tex [label = \"tex\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    engine [label = \"tinytex\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    pdf [label = \"PDF\", fillcolor = \"#ccebc5\"]\n                    style [label = \"LaTeX\ntemplate\", fillcolor = \"#fed9a6\"]\n                  edge []\n                    rmd -> knitr\n                    knitr -> md\n                    knitr -> img\n                    md -> pandoc\n                    img -> pandoc\n                    pandoc -> blank [arrowhead = none]\n                    pandoc -> word\n                    pandoc -> epub\n                    pandoc -> html\n                    tex -> engine\n                    style -> blank [arrowhead = none]\n                    blank -> tex\n                    engine -> pdf\n                    { rank = same; word, epub, html, tex }\n                  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4985f5bc4c0f98bf7bbe" style="width:500px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4985f5bc4c0f98bf7bbe">{"x":{"diagram":"\n                  digraph{\n                  graph []\n                  node [shape = rectangle, fontname = \"Courier New\", fontface = bold, style = filled]\n                    rmd [label = \"R Markdown\", fillcolor = \"#fbb4ae\"]\n                    knitr [label = \"knitr\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    pandoc [label = \"pandoc\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    word [label = \"MS Word\", fillcolor = \"#ccebc5\"]\n                    epub [label = \"EPUB\", fillcolor = \"#ccebc5\"]\n                    html [label = \"gitpages\", fillcolor = \"#ccebc5\"]\n                    blank [shape = point, width = 0, height = 0]\n                    img [label = \"graphics\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    md [label = \"markdown\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    tex [label = \"tex\", shape = polygon, sides = 6, fillcolor = \"#decbe4\"]\n                    engine [label = \"tinytex\", shape = ellipse, fillcolor = \"#ffffcc\"]\n                    pdf [label = \"PDF\", fillcolor = \"#ccebc5\"]\n                    style [label = \"LaTeX\ntemplate\", fillcolor = \"#fed9a6\"]\n                  edge []\n                    rmd -> knitr\n                    knitr -> md\n                    knitr -> img\n                    md -> pandoc\n                    img -> pandoc\n                    pandoc -> blank [arrowhead = none]\n                    pandoc -> word\n                    pandoc -> epub\n                    pandoc -> html\n                    tex -> engine\n                    style -> blank [arrowhead = none]\n                    blank -> tex\n                    engine -> pdf\n                    { rank = same; word, epub, html, tex }\n                  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 0.1: Illustration of document generation in gaelsdown, with inputs in red/orange rectangles, software in yellow ellipses, intermediate products in purple hexagons, and outputs a green rectangles.
 </p>
@@ -335,6 +336,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

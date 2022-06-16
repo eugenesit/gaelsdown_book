@@ -25,7 +25,7 @@ With a **gaelsdown** project, you may not want to include all of the automatical
 
 ## Troubleshooting
 
-Perhaps the biggest challenge of working with **gaelsdown** comes from the fact that involves different software working together (see ). This means that errors can be introduced at different stages of your document assembly.
+Perhaps the biggest challenge of working with **gaelsdown** comes from the fact that involves different software working together (see  Figure \@ref(fig:knit-diagram)). This means that errors can be introduced at different stages of your document assembly.
 
 Thankfully, it's relatively easy to determine where the error is introduced, which helps a lot with resolving these errors. When you knit the index.Rmd, the rendering will follow a set sequence, so the source of the error will be apparent in the Render panel in RStudio (see Figure \@ref(fig:knit-diagram)). You may need to check that your installations for requisite packages are up to date (such as rmarkdown, tinytex).
 

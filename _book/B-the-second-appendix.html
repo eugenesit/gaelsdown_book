@@ -173,12 +173,13 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="1-getting-started.html"><a href="1-getting-started.html#writing-in-markdown"><i class="fa fa-check"></i><b>1.1</b> Writing in markdown</a></li>
 <li class="chapter" data-level="1.2" data-path="1-getting-started.html"><a href="1-getting-started.html#figures-and-tables-in-r-markdown"><i class="fa fa-check"></i><b>1.2</b> Figures and tables in R markdown</a></li>
-<li class="chapter" data-level="1.3" data-path="1-getting-started.html"><a href="1-getting-started.html#assembling-your-thesis"><i class="fa fa-check"></i><b>1.3</b> Assembling your thesis</a>
+<li class="chapter" data-level="1.3" data-path="1-getting-started.html"><a href="1-getting-started.html#math-equations-and-formulas"><i class="fa fa-check"></i><b>1.3</b> Math equations and formulas</a></li>
+<li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#assembling-your-thesis"><i class="fa fa-check"></i><b>1.4</b> Assembling your thesis</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.3.1</b> YAML Ain’t Markup Language</a></li>
-<li class="chapter" data-level="1.3.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.3.2</b> Folders and files</a></li>
+<li class="chapter" data-level="1.4.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.4.1</b> YAML Ain’t Markup Language</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.4.2</b> Folders and files</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary</a></li>
+<li class="chapter" data-level="1.5" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.5</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-workflow.html"><a href="2-workflow.html"><i class="fa fa-check"></i><b>2</b> Workflow</a>
 <ul>
@@ -233,63 +234,63 @@ div.csl-indent {
 <div id="the-second-appendix" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">B</span> The second appendix<a href="B-the-second-appendix.html#the-second-appendix" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This second appendix includes all of the R chunks of code that were hidden throughout the document (using the <code>include = FALSE</code> chunk tag) to help with readability and/or setup.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="B-the-second-appendix.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># By default tinytex only compiles once; compiling multiple</span></span>
-<span id="cb5-2"><a href="B-the-second-appendix.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># times is necessary to ensure the List of Figures and List of Tables</span></span>
-<span id="cb5-3"><a href="B-the-second-appendix.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># page numbers are correct if listed in the Table of Contents</span></span>
-<span id="cb5-4"><a href="B-the-second-appendix.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tinytex.compile.min_times =</span> <span class="dv">3</span>)</span>
-<span id="cb5-5"><a href="B-the-second-appendix.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="B-the-second-appendix.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># This chunk ensures that the gaelsdown package is</span></span>
-<span id="cb5-7"><a href="B-the-second-appendix.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># installed and loaded. This gaelsdown package includes</span></span>
-<span id="cb5-8"><a href="B-the-second-appendix.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># the template files for the thesis.</span></span>
-<span id="cb5-9"><a href="B-the-second-appendix.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(devtools))</span>
-<span id="cb5-10"><a href="B-the-second-appendix.html#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
-<span id="cb5-11"><a href="B-the-second-appendix.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(gaelsdown))</span>
-<span id="cb5-12"><a href="B-the-second-appendix.html#cb5-12" aria-hidden="true" tabindex="-1"></a>  devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;eugenesit/gaelsdown&quot;</span>)</span>
-<span id="cb5-13"><a href="B-the-second-appendix.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gaelsdown)</span>
-<span id="cb5-14"><a href="B-the-second-appendix.html#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(DiagrammeR))</span>
-<span id="cb5-15"><a href="B-the-second-appendix.html#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;DiagrammeR&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
-<span id="cb5-16"><a href="B-the-second-appendix.html#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DiagrammeR)</span>
-<span id="cb5-17"><a href="B-the-second-appendix.html#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(webshot))</span>
-<span id="cb5-18"><a href="B-the-second-appendix.html#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;webshot&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
-<span id="cb5-19"><a href="B-the-second-appendix.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(webshot)</span>
-<span id="cb5-20"><a href="B-the-second-appendix.html#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span>webshot<span class="sc">::</span><span class="fu">is_phantomjs_installed</span>())</span>
-<span id="cb5-21"><a href="B-the-second-appendix.html#cb5-21" aria-hidden="true" tabindex="-1"></a>  webshot<span class="sc">::</span><span class="fu">install_phantomjs</span>()</span>
-<span id="cb5-22"><a href="B-the-second-appendix.html#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(kableExtra))</span>
-<span id="cb5-23"><a href="B-the-second-appendix.html#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;kableExtra&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
-<span id="cb5-24"><a href="B-the-second-appendix.html#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="B-the-second-appendix.html#cb6-1" aria-hidden="true" tabindex="-1"></a>DiagrammeR<span class="sc">::</span><span class="fu">grViz</span>(<span class="st">&quot;</span></span>
-<span id="cb6-2"><a href="B-the-second-appendix.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">                  digraph{</span></span>
-<span id="cb6-3"><a href="B-the-second-appendix.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="st">                  graph []</span></span>
-<span id="cb6-4"><a href="B-the-second-appendix.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">                  node [shape = rectangle, fontname = &#39;Courier New&#39;, fontface = bold, style = filled]</span></span>
-<span id="cb6-5"><a href="B-the-second-appendix.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">                    rmd [label = &#39;R Markdown&#39;, fillcolor = &#39;#fbb4ae&#39;]</span></span>
-<span id="cb6-6"><a href="B-the-second-appendix.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st">                    knitr [label = &#39;knitr&#39;, shape = ellipse, fillcolor = &#39;#ffffcc&#39;]</span></span>
-<span id="cb6-7"><a href="B-the-second-appendix.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc [label = &#39;pandoc&#39;, shape = ellipse, fillcolor = &#39;#ffffcc&#39;]</span></span>
-<span id="cb6-8"><a href="B-the-second-appendix.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="st">                    word [label = &#39;MS Word&#39;, fillcolor = &#39;#ccebc5&#39;]</span></span>
-<span id="cb6-9"><a href="B-the-second-appendix.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="st">                    epub [label = &#39;EPUB&#39;, fillcolor = &#39;#ccebc5&#39;]</span></span>
-<span id="cb6-10"><a href="B-the-second-appendix.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="st">                    html [label = &#39;gitpages&#39;, fillcolor = &#39;#ccebc5&#39;]</span></span>
-<span id="cb6-11"><a href="B-the-second-appendix.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="st">                    blank [shape = point, width = 0, height = 0]</span></span>
-<span id="cb6-12"><a href="B-the-second-appendix.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="st">                    img [label = &#39;graphics&#39;, shape = polygon, sides = 6, fillcolor = &#39;#decbe4&#39;]</span></span>
-<span id="cb6-13"><a href="B-the-second-appendix.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="st">                    md [label = &#39;markdown&#39;, shape = polygon, sides = 6, fillcolor = &#39;#decbe4&#39;]</span></span>
-<span id="cb6-14"><a href="B-the-second-appendix.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">                    tex [label = &#39;tex&#39;, shape = polygon, sides = 6, fillcolor = &#39;#decbe4&#39;]</span></span>
-<span id="cb6-15"><a href="B-the-second-appendix.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="st">                    engine [label = &#39;tinytex&#39;, shape = ellipse, fillcolor = &#39;#ffffcc&#39;]</span></span>
-<span id="cb6-16"><a href="B-the-second-appendix.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="st">                    pdf [label = &#39;PDF&#39;, fillcolor = &#39;#ccebc5&#39;]</span></span>
-<span id="cb6-17"><a href="B-the-second-appendix.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="st">                    style [label = &#39;LaTeX</span><span class="sc">\n</span><span class="st">template&#39;, fillcolor = &#39;#fed9a6&#39;]</span></span>
-<span id="cb6-18"><a href="B-the-second-appendix.html#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="st">                  edge []</span></span>
-<span id="cb6-19"><a href="B-the-second-appendix.html#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="st">                    rmd -&gt; knitr</span></span>
-<span id="cb6-20"><a href="B-the-second-appendix.html#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="st">                    knitr -&gt; md</span></span>
-<span id="cb6-21"><a href="B-the-second-appendix.html#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="st">                    knitr -&gt; img</span></span>
-<span id="cb6-22"><a href="B-the-second-appendix.html#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="st">                    md -&gt; pandoc</span></span>
-<span id="cb6-23"><a href="B-the-second-appendix.html#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="st">                    img -&gt; pandoc</span></span>
-<span id="cb6-24"><a href="B-the-second-appendix.html#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc -&gt; blank [arrowhead = none]</span></span>
-<span id="cb6-25"><a href="B-the-second-appendix.html#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc -&gt; word</span></span>
-<span id="cb6-26"><a href="B-the-second-appendix.html#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc -&gt; epub</span></span>
-<span id="cb6-27"><a href="B-the-second-appendix.html#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc -&gt; html</span></span>
-<span id="cb6-28"><a href="B-the-second-appendix.html#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="st">                    tex -&gt; engine</span></span>
-<span id="cb6-29"><a href="B-the-second-appendix.html#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="st">                    style -&gt; blank [arrowhead = none]</span></span>
-<span id="cb6-30"><a href="B-the-second-appendix.html#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="st">                    blank -&gt; tex</span></span>
-<span id="cb6-31"><a href="B-the-second-appendix.html#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="st">                    engine -&gt; pdf</span></span>
-<span id="cb6-32"><a href="B-the-second-appendix.html#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="st">                    { rank = same; word, epub, html, tex }</span></span>
-<span id="cb6-33"><a href="B-the-second-appendix.html#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="st">                  }&quot;</span>, <span class="at">width =</span> <span class="dv">500</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="B-the-second-appendix.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># By default tinytex only compiles once; compiling multiple</span></span>
+<span id="cb6-2"><a href="B-the-second-appendix.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># times is necessary to ensure the List of Figures and List of Tables</span></span>
+<span id="cb6-3"><a href="B-the-second-appendix.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># page numbers are correct if listed in the Table of Contents</span></span>
+<span id="cb6-4"><a href="B-the-second-appendix.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">tinytex.compile.min_times =</span> <span class="dv">3</span>)</span>
+<span id="cb6-5"><a href="B-the-second-appendix.html#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="B-the-second-appendix.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># This chunk ensures that the gaelsdown package is</span></span>
+<span id="cb6-7"><a href="B-the-second-appendix.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># installed and loaded. This gaelsdown package includes</span></span>
+<span id="cb6-8"><a href="B-the-second-appendix.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># the template files for the thesis.</span></span>
+<span id="cb6-9"><a href="B-the-second-appendix.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(devtools))</span>
+<span id="cb6-10"><a href="B-the-second-appendix.html#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
+<span id="cb6-11"><a href="B-the-second-appendix.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(gaelsdown))</span>
+<span id="cb6-12"><a href="B-the-second-appendix.html#cb6-12" aria-hidden="true" tabindex="-1"></a>  devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;eugenesit/gaelsdown&quot;</span>)</span>
+<span id="cb6-13"><a href="B-the-second-appendix.html#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gaelsdown)</span>
+<span id="cb6-14"><a href="B-the-second-appendix.html#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(DiagrammeR))</span>
+<span id="cb6-15"><a href="B-the-second-appendix.html#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;DiagrammeR&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
+<span id="cb6-16"><a href="B-the-second-appendix.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DiagrammeR)</span>
+<span id="cb6-17"><a href="B-the-second-appendix.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(webshot))</span>
+<span id="cb6-18"><a href="B-the-second-appendix.html#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;webshot&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
+<span id="cb6-19"><a href="B-the-second-appendix.html#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(webshot)</span>
+<span id="cb6-20"><a href="B-the-second-appendix.html#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span>webshot<span class="sc">::</span><span class="fu">is_phantomjs_installed</span>())</span>
+<span id="cb6-21"><a href="B-the-second-appendix.html#cb6-21" aria-hidden="true" tabindex="-1"></a>  webshot<span class="sc">::</span><span class="fu">install_phantomjs</span>()</span>
+<span id="cb6-22"><a href="B-the-second-appendix.html#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(kableExtra))</span>
+<span id="cb6-23"><a href="B-the-second-appendix.html#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;kableExtra&quot;</span>, <span class="at">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)</span>
+<span id="cb6-24"><a href="B-the-second-appendix.html#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="B-the-second-appendix.html#cb7-1" aria-hidden="true" tabindex="-1"></a>DiagrammeR<span class="sc">::</span><span class="fu">grViz</span>(<span class="st">&quot;</span></span>
+<span id="cb7-2"><a href="B-the-second-appendix.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="st">                  digraph{</span></span>
+<span id="cb7-3"><a href="B-the-second-appendix.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="st">                  graph []</span></span>
+<span id="cb7-4"><a href="B-the-second-appendix.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="st">                  node [shape = rectangle, fontname = &#39;Courier New&#39;, fontface = bold, style = filled]</span></span>
+<span id="cb7-5"><a href="B-the-second-appendix.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="st">                    rmd [label = &#39;R Markdown&#39;, fillcolor = &#39;#fbb4ae&#39;]</span></span>
+<span id="cb7-6"><a href="B-the-second-appendix.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">                    knitr [label = &#39;knitr&#39;, shape = ellipse, fillcolor = &#39;#ffffcc&#39;]</span></span>
+<span id="cb7-7"><a href="B-the-second-appendix.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc [label = &#39;pandoc&#39;, shape = ellipse, fillcolor = &#39;#ffffcc&#39;]</span></span>
+<span id="cb7-8"><a href="B-the-second-appendix.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="st">                    word [label = &#39;MS Word&#39;, fillcolor = &#39;#ccebc5&#39;]</span></span>
+<span id="cb7-9"><a href="B-the-second-appendix.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="st">                    epub [label = &#39;EPUB&#39;, fillcolor = &#39;#ccebc5&#39;]</span></span>
+<span id="cb7-10"><a href="B-the-second-appendix.html#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="st">                    html [label = &#39;gitpages&#39;, fillcolor = &#39;#ccebc5&#39;]</span></span>
+<span id="cb7-11"><a href="B-the-second-appendix.html#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="st">                    blank [shape = point, width = 0, height = 0]</span></span>
+<span id="cb7-12"><a href="B-the-second-appendix.html#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="st">                    img [label = &#39;graphics&#39;, shape = polygon, sides = 6, fillcolor = &#39;#decbe4&#39;]</span></span>
+<span id="cb7-13"><a href="B-the-second-appendix.html#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="st">                    md [label = &#39;markdown&#39;, shape = polygon, sides = 6, fillcolor = &#39;#decbe4&#39;]</span></span>
+<span id="cb7-14"><a href="B-the-second-appendix.html#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="st">                    tex [label = &#39;tex&#39;, shape = polygon, sides = 6, fillcolor = &#39;#decbe4&#39;]</span></span>
+<span id="cb7-15"><a href="B-the-second-appendix.html#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="st">                    engine [label = &#39;tinytex&#39;, shape = ellipse, fillcolor = &#39;#ffffcc&#39;]</span></span>
+<span id="cb7-16"><a href="B-the-second-appendix.html#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="st">                    pdf [label = &#39;PDF&#39;, fillcolor = &#39;#ccebc5&#39;]</span></span>
+<span id="cb7-17"><a href="B-the-second-appendix.html#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="st">                    style [label = &#39;LaTeX</span><span class="sc">\n</span><span class="st">template&#39;, fillcolor = &#39;#fed9a6&#39;]</span></span>
+<span id="cb7-18"><a href="B-the-second-appendix.html#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="st">                  edge []</span></span>
+<span id="cb7-19"><a href="B-the-second-appendix.html#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="st">                    rmd -&gt; knitr</span></span>
+<span id="cb7-20"><a href="B-the-second-appendix.html#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="st">                    knitr -&gt; md</span></span>
+<span id="cb7-21"><a href="B-the-second-appendix.html#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="st">                    knitr -&gt; img</span></span>
+<span id="cb7-22"><a href="B-the-second-appendix.html#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="st">                    md -&gt; pandoc</span></span>
+<span id="cb7-23"><a href="B-the-second-appendix.html#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="st">                    img -&gt; pandoc</span></span>
+<span id="cb7-24"><a href="B-the-second-appendix.html#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc -&gt; blank [arrowhead = none]</span></span>
+<span id="cb7-25"><a href="B-the-second-appendix.html#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc -&gt; word</span></span>
+<span id="cb7-26"><a href="B-the-second-appendix.html#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc -&gt; epub</span></span>
+<span id="cb7-27"><a href="B-the-second-appendix.html#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="st">                    pandoc -&gt; html</span></span>
+<span id="cb7-28"><a href="B-the-second-appendix.html#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="st">                    tex -&gt; engine</span></span>
+<span id="cb7-29"><a href="B-the-second-appendix.html#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="st">                    style -&gt; blank [arrowhead = none]</span></span>
+<span id="cb7-30"><a href="B-the-second-appendix.html#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="st">                    blank -&gt; tex</span></span>
+<span id="cb7-31"><a href="B-the-second-appendix.html#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="st">                    engine -&gt; pdf</span></span>
+<span id="cb7-32"><a href="B-the-second-appendix.html#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="st">                    { rank = same; word, epub, html, tex }</span></span>
+<span id="cb7-33"><a href="B-the-second-appendix.html#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="st">                  }&quot;</span>, <span class="at">width =</span> <span class="dv">500</span>)</span></code></pre></div>
 
 </div>
             </section>
@@ -352,6 +353,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

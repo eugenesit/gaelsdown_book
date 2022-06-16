@@ -173,12 +173,13 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="1-getting-started.html"><a href="1-getting-started.html#writing-in-markdown"><i class="fa fa-check"></i><b>1.1</b> Writing in markdown</a></li>
 <li class="chapter" data-level="1.2" data-path="1-getting-started.html"><a href="1-getting-started.html#figures-and-tables-in-r-markdown"><i class="fa fa-check"></i><b>1.2</b> Figures and tables in R markdown</a></li>
-<li class="chapter" data-level="1.3" data-path="1-getting-started.html"><a href="1-getting-started.html#assembling-your-thesis"><i class="fa fa-check"></i><b>1.3</b> Assembling your thesis</a>
+<li class="chapter" data-level="1.3" data-path="1-getting-started.html"><a href="1-getting-started.html#math-equations-and-formulas"><i class="fa fa-check"></i><b>1.3</b> Math equations and formulas</a></li>
+<li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#assembling-your-thesis"><i class="fa fa-check"></i><b>1.4</b> Assembling your thesis</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.3.1</b> YAML Ain’t Markup Language</a></li>
-<li class="chapter" data-level="1.3.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.3.2</b> Folders and files</a></li>
+<li class="chapter" data-level="1.4.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.4.1</b> YAML Ain’t Markup Language</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.4.2</b> Folders and files</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary</a></li>
+<li class="chapter" data-level="1.5" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.5</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-workflow.html"><a href="2-workflow.html"><i class="fa fa-check"></i><b>2</b> Workflow</a>
 <ul>
@@ -254,7 +255,7 @@ div.csl-indent {
 </div>
 <div id="troubleshooting" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Troubleshooting<a href="2-workflow.html#troubleshooting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Perhaps the biggest challenge of working with <strong>gaelsdown</strong> comes from the fact that involves different software working together (see ). This means that errors can be introduced at different stages of your document assembly.</p>
+<p>Perhaps the biggest challenge of working with <strong>gaelsdown</strong> comes from the fact that involves different software working together (see Figure <a href="introduction.html#fig:knit-diagram">0.1</a>). This means that errors can be introduced at different stages of your document assembly.</p>
 <p>Thankfully, it’s relatively easy to determine where the error is introduced, which helps a lot with resolving these errors. When you knit the index.Rmd, the rendering will follow a set sequence, so the source of the error will be apparent in the Render panel in RStudio (see Figure <a href="introduction.html#fig:knit-diagram">0.1</a>). You may need to check that your installations for requisite packages are up to date (such as rmarkdown, tinytex).</p>
 <div id="r-errors" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> R errors<a href="2-workflow.html#r-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -344,6 +345,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

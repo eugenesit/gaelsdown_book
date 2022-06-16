@@ -2,6 +2,7 @@ fig:knit-diagram
 getting-started
 writing-in-markdown
 figures-and-tables-in-r-markdown
+math-equations-and-formulas
 assembling-your-thesis
 yaml-aint-markup-language
 folders-and-files

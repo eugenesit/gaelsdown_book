@@ -173,12 +173,13 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="1-getting-started.html"><a href="1-getting-started.html#writing-in-markdown"><i class="fa fa-check"></i><b>1.1</b> Writing in markdown</a></li>
 <li class="chapter" data-level="1.2" data-path="1-getting-started.html"><a href="1-getting-started.html#figures-and-tables-in-r-markdown"><i class="fa fa-check"></i><b>1.2</b> Figures and tables in R markdown</a></li>
-<li class="chapter" data-level="1.3" data-path="1-getting-started.html"><a href="1-getting-started.html#assembling-your-thesis"><i class="fa fa-check"></i><b>1.3</b> Assembling your thesis</a>
+<li class="chapter" data-level="1.3" data-path="1-getting-started.html"><a href="1-getting-started.html#math-equations-and-formulas"><i class="fa fa-check"></i><b>1.3</b> Math equations and formulas</a></li>
+<li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#assembling-your-thesis"><i class="fa fa-check"></i><b>1.4</b> Assembling your thesis</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.3.1</b> YAML Ain’t Markup Language</a></li>
-<li class="chapter" data-level="1.3.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.3.2</b> Folders and files</a></li>
+<li class="chapter" data-level="1.4.1" data-path="1-getting-started.html"><a href="1-getting-started.html#yaml-aint-markup-language"><i class="fa fa-check"></i><b>1.4.1</b> YAML Ain’t Markup Language</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-getting-started.html"><a href="1-getting-started.html#folders-and-files"><i class="fa fa-check"></i><b>1.4.2</b> Folders and files</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.4</b> Summary</a></li>
+<li class="chapter" data-level="1.5" data-path="1-getting-started.html"><a href="1-getting-started.html#summary"><i class="fa fa-check"></i><b>1.5</b> Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-workflow.html"><a href="2-workflow.html"><i class="fa fa-check"></i><b>2</b> Workflow</a>
 <ul>
@@ -534,61 +535,75 @@ Valiant
 <p><img src="thesis_files/figure-html/cars-figure-1.png" width="528" style="display: block; margin: auto;" /></p>
 <p>I’ll have some tips on how to make your tables and figures look great in the next chapter on <a href="3-additional-functions.html#additional-functions">Additional functions</a>.</p>
 </div>
-<div id="assembling-your-thesis" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assembling your thesis<a href="1-getting-started.html#assembling-your-thesis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="math-equations-and-formulas" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Math equations and formulas<a href="1-getting-started.html#math-equations-and-formulas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One of the unique areas of strength of LaTeX is its support for writing equations and other scientific expressions, such as chemical formulas. For example, if you wanted to show the equation for the rate of population change, you would enter the following:</p>
+<p><code>$\frac{dN}{dt} = rN(1-\frac{N}{K})$</code></p>
+<p>Which produces:</p>
+<p><span class="math inline">\(\frac{dN}{dt} = rN(1-\frac{N}{K})\)</span></p>
+<p>Equations can also be numbered and referred to, like figures or tables, by using the LaTeX command <code>\begin{equation}</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="1-getting-started.html#cb4-1" aria-hidden="true" tabindex="-1"></a>\begin{equation}</span>
+<span id="cb4-2"><a href="1-getting-started.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">S</span>(t) <span class="ot">=</span> \frac{S_{max}}{<span class="dv">1</span> <span class="sc">+</span> e<span class="sc">^</span>{<span class="sc">-</span>(t<span class="sc">-</span>T_{i}) <span class="sc">*</span> r}} \label{eq<span class="sc">:</span>logistic}</span>
+<span id="cb4-3"><a href="1-getting-started.html#cb4-3" aria-hidden="true" tabindex="-1"></a>\end{equation}</span></code></pre></div>
+<p><span class="math display">\[\begin{equation}
+S(t) = \frac{S_{max}}{1 + e^{-(t-T_{i}) * r}} \label{eq:logistic}
+\end{equation}\]</span></p>
+</div>
+<div id="assembling-your-thesis" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Assembling your thesis<a href="1-getting-started.html#assembling-your-thesis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Although the final product you obtain using <strong>gaelsdown</strong> will likely be a single document contained in one file, there are multiple files that go into creating this document. There’s a simplicity to this in that each individual file has a specific function within the larger document, and I’ll explain how you can customize the structure of your thesis by adding or removing certain files or sections.</p>
-<div id="yaml-aint-markup-language" class="section level3 hasAnchor" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> YAML Ain’t Markup Language<a href="1-getting-started.html#yaml-aint-markup-language" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="yaml-aint-markup-language" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> YAML Ain’t Markup Language<a href="1-getting-started.html#yaml-aint-markup-language" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Every thesis generated using this template has an <strong>index.Rmd</strong> file. This is the file you use to knit the document, and it contains your <strong>YAML</strong> section (recursively named, “YAML Ain’t Markup Language”). Information from the <strong>YAML</strong> is passed onto <strong>Pandoc</strong>, and may include specifications for the output format and other options. You can also include <em>frontmatter</em> material here, such as your abstract.</p>
 <p>Open up <strong>index.Rmd</strong> in RStudio to see what the YAML looks like. It’s the section at the beginning bracketed by three dashes:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="1-getting-started.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb4-2"><a href="1-getting-started.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="1-getting-started.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="1-getting-started.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb5-2"><a href="1-getting-started.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="1-getting-started.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div>
 <p>Note: You need to be particularly attentive to the spaces in the YAML, so make sure when uncommenting lines you only remove the <code>#</code> and not the spaces!</p>
 <p>At the top of the YAML are some pieces of information that get passed along to the title page, such as the title and author name. Since the format for title pages are set for Queen’s University, you’ll want to change the answers to these entries, but not which lines are included (To change the format of the title page, you’d have to go into the .tex template).</p>
 <p>Following this you’ll find your <code>output</code> options. Here, you have the option of either PDF, gitbook (web page), Word, and EPUB; to change the format, just comment out the active line and uncomment the appropriate line. After this are lines for your introductory material: abstract, acknowledgements, glossary, etc. These sections are <em>frontmatter</em>, will appear before the Table of Contents, are numbered with Roman instead of Arabic numerals, and won’t be labelled as chapters.</p>
 <p>Frontmatter is a bit quirky in that it needs to be read directly into LaTeX, so the frontmatter sections have to be defined in the .tex template and the YAML. I’ve defined all of the required and optional frontmatter sections specified for Queen’s University theses, with some of them commented out. If you want to include frontmatter in another output format such as Word, then it has to be defined in the body of the .Rmd file, not the YAML.</p>
 <p>After this are instructions for your references section. There’s some defaults here for this document but you’ll want to specify your own <strong>bib</strong> and <strong>csl</strong> file. The process for using these are the same as in <strong>bookdown</strong>, so for instructions on how to specify the <code>bibliography</code> and <code>csl</code> sections, follow Yihui Xie’s tutorial <a href="https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html">here</a>.</p>
 </div>
-<div id="folders-and-files" class="section level3 hasAnchor" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Folders and files<a href="1-getting-started.html#folders-and-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="folders-and-files" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Folders and files<a href="1-getting-started.html#folders-and-files" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Upon creating your <em>gaelsdown</em> project in RStudio, your folder will have the following files and folders:</p>
-<div id="bib" class="section level4 hasAnchor" number="1.3.2.1">
-<h4><span class="header-section-number">1.3.2.1</span> bib/<a href="1-getting-started.html#bib" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="bib" class="section level4 hasAnchor" number="1.4.2.1">
+<h4><span class="header-section-number">1.4.2.1</span> bib/<a href="1-getting-started.html#bib" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The .bib file lists the references that you use in your thesis, and the name of your .bib should be specified in the YAML.</p>
 </div>
-<div id="csl" class="section level4 hasAnchor" number="1.3.2.2">
-<h4><span class="header-section-number">1.3.2.2</span> csl/<a href="1-getting-started.html#csl" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="csl" class="section level4 hasAnchor" number="1.4.2.2">
+<h4><span class="header-section-number">1.4.2.2</span> csl/<a href="1-getting-started.html#csl" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The .csl file defines the formatting for references in your thesis, and .csl files matching the format for specific journals can be found online. The file name should also be specified in the YAML.</p>
 </div>
-<div id="data-and-figure" class="section level4 hasAnchor" number="1.3.2.3">
-<h4><span class="header-section-number">1.3.2.3</span> data/ and figure/<a href="1-getting-started.html#data-and-figure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="data-and-figure" class="section level4 hasAnchor" number="1.4.2.3">
+<h4><span class="header-section-number">1.4.2.3</span> data/ and figure/<a href="1-getting-started.html#data-and-figure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>These are just folders for example data and figures; you can set the folders as you wish for other files (e.g. a <code>R/</code> folder for scripts).</p>
 </div>
-<div id="bookdown.yml" class="section level4 hasAnchor" number="1.3.2.4">
-<h4><span class="header-section-number">1.3.2.4</span> _bookdown.yml<a href="1-getting-started.html#bookdown.yml" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="bookdown.yml" class="section level4 hasAnchor" number="1.4.2.4">
+<h4><span class="header-section-number">1.4.2.4</span> _bookdown.yml<a href="1-getting-started.html#bookdown.yml" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Configuration file for <strong>bookdown</strong>, the package underlying <strong>gaelsdown</strong>. You can change the output file and chapter prefixes here; see the <a href="https://bookdown.org/yihui/bookdown/configuration.html">bookdown reference</a> for more information.</p>
 </div>
-<div id="chap1.rmd-02-chap2.rmd" class="section level4 hasAnchor" number="1.3.2.5">
-<h4><span class="header-section-number">1.3.2.5</span> 01-chap1.Rmd, 02-chap2.Rmd…<a href="1-getting-started.html#chap1.rmd-02-chap2.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="chap1.rmd-02-chap2.rmd" class="section level4 hasAnchor" number="1.4.2.5">
+<h4><span class="header-section-number">1.4.2.5</span> 01-chap1.Rmd, 02-chap2.Rmd…<a href="1-getting-started.html#chap1.rmd-02-chap2.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>These are the main chapters of your thesis, which <strong>gaelsdown</strong> will join into one document. The .Rmd files in your main directory will all be knit together, so you can add as many files as you need and it’s not necessary to follow this naming format (it just makes things easier to read).</p>
 </div>
-<div id="references.rmd" class="section level4 hasAnchor" number="1.3.2.6">
-<h4><span class="header-section-number">1.3.2.6</span> 98-references.Rmd<a href="1-getting-started.html#references.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="references.rmd" class="section level4 hasAnchor" number="1.4.2.6">
+<h4><span class="header-section-number">1.4.2.6</span> 98-references.Rmd<a href="1-getting-started.html#references.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Your references come after every section apart from the appendices.</p>
 </div>
-<div id="appendix.rmd" class="section level4 hasAnchor" number="1.3.2.7">
-<h4><span class="header-section-number">1.3.2.7</span> 99-appendix.Rmd<a href="1-getting-started.html#appendix.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="appendix.rmd" class="section level4 hasAnchor" number="1.4.2.7">
+<h4><span class="header-section-number">1.4.2.7</span> 99-appendix.Rmd<a href="1-getting-started.html#appendix.rmd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The appendices come after the references. You can add as many appendix sections as necessary.</p>
 </div>
-<div id="prelims" class="section level4 hasAnchor" number="1.3.2.8">
-<h4><span class="header-section-number">1.3.2.8</span> prelims/<a href="1-getting-started.html#prelims" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="prelims" class="section level4 hasAnchor" number="1.4.2.8">
+<h4><span class="header-section-number">1.4.2.8</span> prelims/<a href="1-getting-started.html#prelims" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Files for your abstract, acknowledgements, and other files can go in here so that they are not automatically knit like chapters but instead inserted ahead of the table of contents according to YAML instructions. I’ve written in if statements to check whether the output is LaTeX or not to decide how to insert these files.</p>
 </div>
 </div>
 </div>
-<div id="summary" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Summary<a href="1-getting-started.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="summary" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Summary<a href="1-getting-started.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this section, I’ve covered markdown basics including text formatting, headers, and links. I’ve introduced how to add figures and tables to your thesis, how YAML is used to configure your output, and the different contents of your <em>gaelsdown</em> project.</p>
 
 </div>
@@ -653,6 +668,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

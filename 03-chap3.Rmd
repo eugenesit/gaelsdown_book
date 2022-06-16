@@ -15,6 +15,11 @@ You can include expressions that would be rendered by TeX in your R markdown
 document; just be aware that they will not be rendered if knitting into 
 other formats such as a gitbook or Word document.
 
+Manual formatting commands such as `\newpage`, `break`, or `\textbf` can be 
+inserted in this way. However, if you find yourself needing to manually adjust 
+the position of page or line breaks, something may need to be reconfigured in 
+the underlying TeX template!
+
 ## Formatting figure captions
 
 Instead of writing the full figure caption in the R code chunk, you can enter

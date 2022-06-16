@@ -1,6 +1,7 @@
 ---
 author: 'Your R. Name'
 institution: 'Queen''s University'
+# Keep the escape on the single quote above
 dept: 'Department of Excellence'
 degree: 'Winner of Science'
 submitdate: 'May 20xx'
@@ -36,6 +37,7 @@ acknowledgements: '`r if(knitr:::is_latex_output()) paste(readLines("prelims/00-
 bibliography: bib/thesis.bib
 # Download your specific csl file and refer to it in the line below.
 csl: csl/apa.csl
+# Specify whether to include list of tables and list of figures as part of table of contents
 lot: false
 lof: true
 always_allow_html: true
@@ -133,7 +135,7 @@ To understand how **gaelsdown** and similar template packages work, you need to 
 
 - **knitr** converts your R markdown file (.Rmd) into a markdown file (.md). The different between a R markdown file is that it includes R code chunks that need to be rendered as images for them to be markdown compatible.
 - **pandoc** is included with your RStudio install and is capable of converting between a large number of different text formats, including markdown, Word (.docx), web browser compatible (.html), and LaTeX (.tex).
-- **`r if(knitr:::is_latex_output()){"\\LaTeX\\"} else {"LaTeX"}`** renders a typeset format such as PDF from .tex files—if you knit into another format such as gitbook or Word, LaTeX will not have been involved.
+- `r if(knitr:::is_latex_output()){"\\LaTeX\\"} else {"**LaTeX**"}` renders a typeset format such as PDF from .tex files—if you knit into another format such as gitbook or Word, LaTeX will not have been involved.
 
 Here's a visualization of how it all flows together:
 

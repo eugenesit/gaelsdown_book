@@ -46,6 +46,28 @@ ggplot(data = mtcars, aes(x = wt, y = mpg)) +
 
 I'll have some tips on how to make your tables and figures look great in the next chapter on [Additional functions].
 
+## Math equations and formulas
+
+One of the unique areas of strength of LaTeX is its support for writing equations and other scientific expressions, such as chemical formulas. For example, if you wanted to show the equation for the rate of population change, you would enter the following: 
+
+`$\frac{dN}{dt} = rN(1-\frac{N}{K})$`
+
+Which produces:
+
+$\frac{dN}{dt} = rN(1-\frac{N}{K})$
+
+Equations can also be numbered and referred to, like figures or tables, by using the LaTeX command `\begin{equation}`:
+
+```{r echo = TRUE, eval = FALSE}
+\begin{equation}
+S(t) = \frac{S_{max}}{1 + e^{-(t-T_{i}) * r}} \label{eq:logistic}
+\end{equation}
+```
+
+\begin{equation}
+S(t) = \frac{S_{max}}{1 + e^{-(t-T_{i}) * r}} \label{eq:logistic}
+\end{equation}
+
 ## Assembling your thesis
 
 Although the final product you obtain using **gaelsdown** will likely be a single document contained in one file, there are multiple files that go into creating this document. There's a simplicity to this in that each individual file has a specific function within the larger document, and I'll explain how you can customize the structure of your thesis by adding or removing certain files or sections.
